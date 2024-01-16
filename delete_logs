@@ -1,0 +1,6 @@
+#!/bin/bash
+
+IFS=$'\n'
+for file in $(find /home/ubuntu/.pm2/logs -name "*.gz" -type f -mtime +13); do
+  rm "$file"
+done
