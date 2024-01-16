@@ -1,0 +1,1 @@
+cd /home/ubuntu/.pm2/logs && ls -R1 | grep .log | sed -e 's/.log//g' | while IFS= read -r line; do mv $line.log $line-$(date +%Y-%m-%d).log; done && ls -R1 | grep $(date +%Y-%m-%d).log | sed -e 's/.log//g' | while IFS= read -r line; do gzip $line.log; done && pm2 flush && pm2 reload all
