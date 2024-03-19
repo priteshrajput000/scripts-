@@ -19,6 +19,12 @@ variable "INSTANCE_USERNAME" {
     default = "ubuntu"
 }
 
+variable "VPC_ID" {
+  default = "vpc-***"
+}
+variable "SUBNETS" {
+    default = ["subnet-aaa","subnet-bb"]
+
 variable "AWS_AMI" {
   description = "AMI of existing EC2 machine"
   default = "ami-*****"
@@ -26,7 +32,7 @@ variable "AWS_AMI" {
 
 variable "EIPS" {
   description = "List of elastic IP addresses"
-  default = [ "11111111", "2222" ]
+  default = [ "1111", "2222" ]
 }
 
 variable "EIP_ALLOT" {
