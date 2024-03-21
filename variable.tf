@@ -18,7 +18,9 @@ variable "PUBLIC_KEY" {
 variable "INSTANCE_USERNAME" {
     default = "ubuntu"
 }
-
+variable "instance_id" {
+    default = "i-************"
+}
 variable "VPC_ID" {
   default = "vpc-***"
 }
